@@ -9,7 +9,9 @@ $app->get('/', function ($request, $response, $args) {
     // Sample log message
     $this->logger->info("Slim-Skeleton '/' route");
     // Render index view
-  
+    $indexcontroller=new controller\indexController;
+    $args['randomxiaohua']=$indexcontroller->getRandomTest();
+    print_r($randomxiaohua);
     return $this->renderer->render($response, 'index.phtml', $args);
 })->setName('index');
 

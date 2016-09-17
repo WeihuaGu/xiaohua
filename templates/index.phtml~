@@ -18,6 +18,17 @@
        
 				<!-- Teal page content  -->		
 				<div class="col s12 m8 l9">     
+					<?php 
+						echo '<ul class="collection">';
+						foreach($randomxiaohua as $item){
+						echo '<li class="collection-item avatar">';
+						echo $item['content'];
+						echo "</br>";
+						echo "</li>";
+						}
+						echo "</ul>";
+						
+					?>
 				</div>
 				
 				<div class="col s12 m4 l3">

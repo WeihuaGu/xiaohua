@@ -1,9 +1,9 @@
 <?php
 namespace app\http\controller;
 class indexController{
-	function getNewTest(){
+	function getRandomTest(){
 		$xiaohua=new \app\model\Xiaohua;
-		return $xiaohua->getNew();
+		return $xiaohua->getRandom();
 	}
 	
 
