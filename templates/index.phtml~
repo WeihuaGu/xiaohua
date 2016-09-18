@@ -13,7 +13,9 @@
 		<script type="text/javascript">
 		
                 </script>
-
+		<?php require_once 'nav.php'; ?>
+		<?php require_once 'headerad.php'; ?>
+		<div class="container">
 		<div class="row"> 
        
 				<!-- Teal page content  -->		
@@ -32,7 +34,10 @@
 				</div>
 				
 				<div class="col s12 m4 l3">
+					<?php require_once 'rightad.php' ; ?>
 				</div>
 		</div>
+		</div>
+		<?php require_once 'footer.php' ; ?>
 </body>
 </html>

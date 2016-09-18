@@ -15,4 +15,15 @@ $app->get('/', function ($request, $response, $args) {
     return $this->renderer->render($response, 'index.phtml', $args);
 })->setName('index');
 
+$app->get('/pic', function ($request, $response, $args) {
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/pic' route");
+    // Render index view
+     $piccontroller=new controller\picController;
+     $args['pic']=$piccontroller->getPic();
+    
+    return $this->renderer->render($response, 'pic.phtml', $args);
+})->setName('pic');
+
+
 

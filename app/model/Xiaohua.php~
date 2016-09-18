@@ -6,6 +6,7 @@ var $appkey = "74327bf4556525a2f6577f2049b17fbb";
 //************2.最新笑话************
 var $urlnew = "http://japi.juhe.cn/joke/content/text.from";
 var $urlran="http://v.juhe.cn/joke/randJoke.php";
+var $urlpic="http://v.juhe.cn/joke/randJoke.php";
 function getRandom(){
 	$params = array(
      		 "page" => "",//当前页数,默认1
@@ -17,7 +18,6 @@ function getRandom(){
 	$result = json_decode($content,true);
 	if($result){
    		 if($result['error_code']=='0'){
-      	  print_r($result);
 	  return $result['result'];
   	  }else{
         	echo $result['error_code'].":".$result['reason'];
@@ -27,6 +27,28 @@ function getRandom(){
 	}
 
 
+
+}
+
+function getPic( ){
+$params = array(
+      "page" => "",//当前页数,默认1
+      "pagesize" => "",//每次返回条数,默认1,最大20
+      "key" => $this->appkey,//您申请的key
+      "type"=>"pic"
+);
+$paramstring = http_build_query($params);
+$content = $this->juhecurl($this->urlpic,$paramstring);
+$result = json_decode($content,true);
+if($result){
+    if($result['error_code']=='0'){
+        print_r($result);
+    }else{
+        echo $result['error_code'].":".$result['reason'];
+    }
+}else{
+    echo "请求失败";
+}
 
 }
 function getNew( ){

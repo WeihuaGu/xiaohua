@@ -2,10 +2,10 @@
 <html>
 	<head>
 	<?php require_once 'header.php'; ?>
-	<meta name="keywords" content="笑话"/>
-       <meta name="descripion" content="笑话大全"/>
+	<meta name="keywords" content="趣图"/>
+       <meta name="descripion" content="趣图，笑话大全"/>
        <meta name="image" content="http://guweihua.yun.93me.com/logo.png">
-       <title>笑话大全</title> 
+       <title>趣图笑话</title> 
 	</head>
 <body>
 		<?php require_once 'animation.php'; ?>
@@ -21,11 +21,16 @@
 				<!-- Teal page content  -->		
 				<div class="col s12 m8 l9">     
 					<?php 
-						echo '<ul class="collection">';
-						foreach($randomxiaohua as $item){
+						echo '<ul>';
+						foreach($pic as $item){
 						echo '<li class="collection-item avatar">';
-						echo $item['content'];
-						echo "</br>";
+						echo        '<div class="card black-grey darken-1">';
+            					echo 		'<div class="card-content black-text">';
+              					echo 		'<span class="card-title">'.$item['content'].'</span>';
+           					echo               '</div>';
+						echo 		'<img src="'.$item['url'].' " />';	
+         					echo        '</div>';
+
 						echo "</li>";
 						}
 						echo "</ul>";
