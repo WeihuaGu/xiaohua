@@ -15,6 +15,7 @@
                 </script>
 		<?php require_once 'nav.php'; ?>
 		<?php require_once 'headerad.php'; ?>
+		<?php require_once 'baidutuicong.php'; ?>
 		<div class="container">
 		<div class="row"> 
        

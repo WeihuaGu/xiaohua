@@ -9,11 +9,10 @@ $app->get('/', function ($request, $response, $args) {
     // Sample log message
     $this->logger->info("Slim-Skeleton '/' route");
     // Render index view
-    $indexcontroller=new controller\indexController;
-    $args['randomxiaohua']=$indexcontroller->getRandomTest();
-    
-    return $this->renderer->render($response, 'index.phtml', $args);
-})->setName('index');
+    $piccontroller=new controller\picController;
+     $args['pic']=$piccontroller->getPic();
+    return $this->renderer->render($response, 'pic.phtml', $args);
+})->setName('pic');
 
 $app->get('/pic', function ($request, $response, $args) {
     // Sample log message
@@ -21,9 +20,16 @@ $app->get('/pic', function ($request, $response, $args) {
     // Render index view
      $piccontroller=new controller\picController;
      $args['pic']=$piccontroller->getPic();
-    
     return $this->renderer->render($response, 'pic.phtml', $args);
 })->setName('pic');
+$app->get('/xiaohua', function ($request, $response, $args) {
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/xiaohua' route");
+    // Render index view
+     $indexcontroller=new controller\indexController;
+     $args['randomxiaohua']=$indexcontroller->getRandomTest();
+    return $this->renderer->render($response, 'xiaohua.phtml', $args);
+})->setName('index');
 
 
 
