@@ -29,7 +29,7 @@
             					echo 		'<div class="card-content black-text">';
               					echo 		'<span class="card-title">'.$item['content'].'</span>';
            					echo               '</div>';
-						echo 		'<img src="'.$item['url'].' " class="responsive-img" />';	
+						echo 		'<img src="'.$item['url'].' " />';	
          					echo        '</div>';
 
 						echo "</li>";
