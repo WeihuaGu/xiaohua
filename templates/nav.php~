@@ -1,7 +1,8 @@
+ <div class="navbar-fixed">
 <nav>      
 				<div class="nav-wrapper">      	
-					<a href="/" class="brand-logo">&nbsp &nbsp趣图|笑话</a>
-					<ul id="nav-mobile" class="right hide-on-med-and-down">			
+					<a href="/" class="hide-on-med-and-down brand-logo">&nbsp &nbsp趣图|笑话</a>
+					<ul id="nav-mobile" class="right">			
 						<li>
 							<a href="/xiaohua">笑话</a>
 						</li>  
@@ -15,3 +16,4 @@
 					</ul>      
 				</div>
 </nav>
+</div>
